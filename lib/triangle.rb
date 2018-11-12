@@ -21,11 +21,7 @@ class Triangle
   def kind
     #binding.pry
     if !self.valid?
-      begin
-        raise Triangle::TriangleError
-      rescue Triangle::TriangleError => error
-          puts error.message
-      end 
+      raise Triangle::TriangleError
     elsif side1 == side2 && side2 == side3
       :equilateral
     elsif side1 == side2 || side1 == side3 || side2 == side3
