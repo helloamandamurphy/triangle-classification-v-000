@@ -19,7 +19,7 @@ class Triangle
   end 
     
   def kind
-    binding.pry
+    #binding.pry
     if !self.valid?
       begin
         raise Triangle::TriangleError
