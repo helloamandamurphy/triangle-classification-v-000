@@ -1,4 +1,3 @@
-require 'pry'
 class Triangle
   attr_accessor :side1, :side2, :side3
   
@@ -19,7 +18,6 @@ class Triangle
   end 
     
   def kind
-    #binding.pry
     if !self.valid?
       raise Triangle::TriangleError
     elsif side1 == side2 && side2 == side3
@@ -32,8 +30,5 @@ class Triangle
   end
   
   class TriangleError < StandardError
-    #def message
-      #"This is not a valid triangle."
-    #end
   end
 end
